@@ -18,40 +18,72 @@
 				width: 20px;
 			}
 
-			img:hover #activityButton {
-				opacity: 0.5;
-
-			}
-
 			button #activityButton {
 				color:white;
 				font-weight:bold;
 				font-family: Big John;
-				font-size: 100px;
+				font-size: 50px;
 				background:black;
-				width:2000px;
+				width:200px;
 			}
 
 			button:hover #activityButton {
 				color: #b40d63;
+				opacity:0.5;
 			}
+
+			div #leftNavBar {
+				font-size: 400px;
+				color: red;
+			}
+
+			#leftNavBar {
+				/*position: fixed;*/
+				font-family: Big John;
+				/*position:fixed;*/
+				height:30px;
+			}
+
+			a #logo {
+				font-family: Big John;
+				font-color: orange;
+			}
+
 		</style>
 
-	</head>
-	<body>
 
-	<div class="container">
-		<div class="page-header">
-			<h1><a href="www.google.com">ROHAN'S PROJECTS</a></h1>
-		</div>
+		<nav id="leftNavBar" class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div id="leftNavBar" class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a id="logo" class="navbar-brand" href="rohanWebsite2.html">ROHAN'S PROJECTS</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+		        <li><a href="#">Link</a></li>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		</nav>
+	</head>
+	
+	<body>	
 		<div class="jumbotron">
 			<button id="activityButton" class="btn btn-default">
 				<img id="activityButton" src="https://d3nevzfk7ii3be.cloudfront.net/igi/ipv5OG2NckM3DfE2.large"/>
-				<p id="activityButton"> iPHONE </p>
+				<p id="activityButton"> SOFTWARE </p>
 			</button>
 			<button id="activityButton" class="btn btn-default">
 				<img id="activityButton" src="https://www.bhphotovideo.com/images/images2000x2000/canon_eos_5d_mark_iv_1274706.jpg"/>
-				<p id="activityButton">CAMERA </p>
+				<p id="activityButton"> PHOTOGRAPHY </p>
 			</button>
 
 
