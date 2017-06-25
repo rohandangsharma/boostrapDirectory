@@ -8,26 +8,21 @@
 		 <link rel="stylesheet" href="css/rohanStylesheet.css">
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		 <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
-		<script src="jquery.localscroll.js" type="text/javascript"></script> 
-		<script src="jquery.scrollTo.js" type="text/javascript"></script> 
-		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abel:400|Roboto+Condensed:400,700,700i,300i,300|Roboto:700,700i,300i,300|Source+Code+Pro:400,500,300,700"/>
-		<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/rohanStylesheet.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/contactMe.css" /> -->
 		<script src="js/modernizr.custom.js"></script>
 	
 		
 	</head>
 	<body>
-		
-		<div class="sectionXL s4">
-			<h1 class="title">R O H A N <span> S H A R M A</span></h1>
+		<div class="section XL s4">
+			<h1 class="title">ROHAN <span> SHARMA</span></h1>
 			<button class="btn explore">EXPLORE</button>
 			<button class="btn arrow"><img src="http://www.sailingcollective.com/assets/img/icon/gal-arrow.png"></button>
 
 
-			<video playsinline autoplay muted loop poster="img/usSquash.jpg" id="bgvid">
+			<video playsinline autoplay muted loop id="bgvid">
 			    <source src="img/stars.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -47,424 +42,392 @@
 		</script>
 
 
+		<div class="wrapper">
+			<div id="chatBot">
+				<!-- <iframe
+				    width="350"
+				    height="430"
+				    src="https://console.api.ai/api-client/demo/embedded/befa13de-daa2-4f45-89de-402b2e05a5c4">
+				</iframe> -->
+			</div>
 
-		<div id="chatBot">
-			<!-- <iframe
-			    width="350"
-			    height="430"
-			    src="https://console.api.ai/api-client/demo/embedded/befa13de-daa2-4f45-89de-402b2e05a5c4">
-			</iframe> -->
-		</div>
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div id="leftNavBar" class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a id="logo" class="navbar-brand" href="index.html">ROHAN'S PROJECTS</a>
+			    </div>
 
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div id="leftNavBar" class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a id="logo" class="navbar-brand" href="index.html">ROHAN'S PROJECTS</a>
-		    </div>
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">HOME<span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">ABOUT</a></li>
+			      </ul>
+			      <form class="navbar-form navbar-left">
+			        <input type="button" data-name="show" value="CHAT" id="chat">
+			      </form>
+			    </div><!-- /.navbar-collapse -->
+			</nav>
 
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">HOME<span class="sr-only">(current)</span></a></li>
-		        <li><a href="#">ABOUT</a></li>
-		      </ul>
-		      <form class="navbar-form navbar-left">
-		        <input type="button" data-name="show" value="CHAT" id="chat">
-		      </form>
-		    </div><!-- /.navbar-collapse -->
-		</nav>
+			<script>
+			   $(window).scroll(function() {
 
-		<script>
-		   $(window).scroll(function() {
-
-			    if ($(this).scrollTop()>0)
-			     {
-			        $('.navbar').fadeIn();
-			     }
-			    else
-			     {
-			      $('.navbar').fadeOut();
-			     }
-			 });
-		</script>
+				    if ($(this).scrollTop()>0)
+				     {
+				        $('.navbar').fadeIn();
+				     }
+				    else
+				     {
+				      $('.navbar').fadeOut();
+				     }
+				 });
+			</script>
 
 
-		<script type="text/javascript">
-			$(document).ready(function () {
-			    $("#chat").click(function () {
-			        if ($(this).data('name') == 'show') {
-			            $("#chatBot").animate({
-			                height: '100%'
-			            });
-			            $(this).data('name', 'hide')
-			            $(".body")
-			        } else {
-			            $("#chatBot").animate({
-			                height: '0%'
-			            });
-			            $(this).data('name', 'show')
-			        }
-			    });
-			});
-
-			$("#chat").click(function() {
-				    $('html,body').animate({
-				        scrollTop: 0},
-				        'slow');
+			<script type="text/javascript">
+				$(document).ready(function () {
+				    $("#chat").click(function () {
+				        if ($(this).data('name') == 'show') {
+				            $("#chatBot").animate({
+				                height: '100%'
+				            });
+				            $(this).data('name', 'hide')
+				            $(".body")
+				        } else {
+				            $("#chatBot").animate({
+				                height: '0%'
+				            });
+				            $(this).data('name', 'show')
+				        }
+				    });
 				});
 
-		</script>
+				$("#chat").click(function() {
+					    $('html,body').animate({
+					        scrollTop: 0},
+					        'slow');
+					});
 
-		<!-- Carousel -->
-			<div class="container">
-			  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-			    <!-- Indicators -->
-			    <ol class="carousel-indicators">
-			      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			      <li data-target="#myCarousel" data-slide-to="1"></li>
-			      <li data-target="#myCarousel" data-slide-to="2"></li>
-			      <li data-target="#myCarousel" data-slide-to="3"></li>
-			      <li data-target="#myCarousel" data-slide-to="4"></li>
-			      <li data-target="#myCarousel" data-slide-to="5"></li>
-			    </ol>
+			</script>
 
-			    <!-- Wrapper for slides -->
-			    <div class="carousel-inner">
-			      <div class="item active photoFilmSlide">
-		        	<img class="tint" src="img/photoFilm.jpg" alt="Photograhy" style="width:100%;">
-			        <div class="carousel-caption">
-			          <h3>Photography & Film</h3>
-			        </div>
-			      </div>
+			<!-- Carousel -->
+				<div class="container">
+				  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				    <!-- Indicators -->
+				    <ol class="carousel-indicators">
+				      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				      <li data-target="#myCarousel" data-slide-to="1"></li>
+				      <li data-target="#myCarousel" data-slide-to="2"></li>
+				      <li data-target="#myCarousel" data-slide-to="4"></li>
+				      <li data-target="#myCarousel" data-slide-to="5"></li>
+				    </ol>
 
-			      <div class="item noblesSlide">
-			        <img src="img/nobles.jpg" alt="School" style="width:100%;">
-			        <div class="carousel-caption">
-			          <h3>Nobles</h3>
-	          		</div>
-			      </div>
-			    
-			      <div class="item roboticsSlide">
-			      	<img src="img/robotics.jpg" alt="New York" style="width:100%;">
-			        <div class="carousel-caption">
-			          <h3>Robotics</h3>
-			        </div>
-	       			</div>
+				    <!-- Wrapper for slides -->
+				    <div class="carousel-inner">
+				      <div class="item active photoFilmSlide">
+			        	<img class="tint" src="img/photoFilm.jpg" alt="Photograhy" style="width:100%;">
+				        <div class="carousel-caption">
+				          <h3>Photography & Film</h3>
+				        </div>
+				      </div>
 
-			       <div class="item serviceSlide">
-			         <img src="img/service.jpg" alt="Service" style="width:100%">
-			         <div class="carousel-caption">
-			         	<h3>Service</h3>
-		         	 </div>
-		           </div>
+				      <div class="item noblesSlide">
+				        <img src="img/nobles.jpg" alt="School" style="width:100%;">
+				        <div class="carousel-caption">
+				          <h3>Nobles</h3>
+		          		</div>
+				      </div>
 
-		           <div class="item sportsSlide">
-			         <img src="img/sports.jpg" alt="Sports" style="width:100%">
-			         <div class="carousel-caption">
-			         	<h3>Sports</h3>
-		         	 </div>
-		           </div>
+				       <div class="item serviceSlide">
+				         <img src="img/service.jpg" alt="Service" style="width:100%">
+				         <div class="carousel-caption">
+				         	<h3>Service</h3>
+			         	 </div>
+			           </div>
 
-		           <div class="item softwareSlide">
-			         <img src="https://d3nevzfk7ii3be.cloudfront.net/igi/ipv5OG2NckM3DfE2.large" alt="Software" style="width:100%">
-			         <div class="carousel-caption">
-			         	<h3>Software</h3>
-		         	 </div>
-		           </div>
-				   
-				   <script type="text/javascript">
-					$(document).ready(function() {
-					   $('.item').localScroll({duration:800});
+			           <div class="item sportsSlide">
+				         <img src="img/sports.jpg" alt="Sports" style="width:100%">
+				         <div class="carousel-caption">
+				         	<h3>Sports</h3>
+			         	 </div>
+			           </div>
+
+			           <div class="item engineeringSlide">
+				         <img src="https://d3nevzfk7ii3be.cloudfront.net/igi/ipv5OG2NckM3DfE2.large" alt="Engineering" style="width:100%">
+				         <div class="carousel-caption">
+				         	<h3>Engineering</h3>
+			         	 </div>
+			           </div>
+					   
+					   <script type="text/javascript">
+						$(document).ready(function() {
+						   $('.item').localScroll({duration:800});
+						});
+						</script>
+
+				    </div> <!-- container -->
+
+				    <script type="text/javascript">
+						var carousel1 = $(this).find('a div.carousel-indicators');
+
+						if (carousel1.is(':visible')) {
+						    $(document).ready(function () {
+							    $('.carousel').carousel({
+							        interval: 3000
+							    });
+
+							    $('.carousel').carousel('cycle');
+						}
+					</script>  
+					<script>
+					$(".photoFilmSlide").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".photoFilm").offset().top},
+					        'slow');
+					});
+
+					$(".noblesSlide").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".nobles").offset().top},
+					        'slow');
+					});
+
+					$(".serviceSlide").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".service").offset().top},
+					        'slow');
+					});
+
+					$(".sportsSlide").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".sports").offset().top},
+					        'slow');
+					});
+
+					$(".engineeringSlide").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".engineering").offset().top},
+					        'slow');
 					});
 					</script>
 
-			    </div> <!-- container -->
+				    <!-- Left and right controls -->
 
-			    <script type="text/javascript">
-					$(document).ready(function () {
-					    $('.carousel').carousel({
-					        interval: 3000
-					    });
-
-					    $('.carousel').carousel('cycle');
-					});
-				</script>  
-				<script>
-				$(".photoFilmSlide").click(function() {
-				    $('html,body').animate({
-				        scrollTop: $(".photoFilm").offset().top},
-				        'slow');
-				});
-
-				$(".noblesSlide").click(function() {
-				    $('html,body').animate({
-				        scrollTop: $(".nobles").offset().top},
-				        'slow');
-				});
-
-				$(".roboticsSlide").click(function() {
-				    $('html,body').animate({
-				        scrollTop: $(".robotics").offset().top},
-				        'slow');
-				});
-
-				$(".serviceSlide").click(function() {
-				    $('html,body').animate({
-				        scrollTop: $(".service").offset().top},
-				        'slow');
-				});
-
-				$(".sportsSlide").click(function() {
-				    $('html,body').animate({
-				        scrollTop: $(".sports").offset().top},
-				        'slow');
-				});
-
-				$(".softwareSlide").click(function() {
-				    $('html,body').animate({
-				        scrollTop: $(".software").offset().top},
-				        'slow');
-				});
-				</script>
-
-			    <!-- Left and right controls -->
-
-			    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			      <span class="glyphicon glyphicon-chevron-left"></span>
-			      <span class="sr-only">Previous</span>
-			    </a>
-			    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-			      <span class="glyphicon glyphicon-chevron-right"></span>
-			      <span class="sr-only">Next</span>
-			    </a>
-			  </div>
-		
-		<div class="sectionLG photoFilm">
+				    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				      <span class="glyphicon glyphicon-chevron-left"></span>
+				      <span class="sr-only">Previous</span>
+				    </a>
+				    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+				      <span class="glyphicon glyphicon-chevron-right"></span>
+				      <span class="sr-only">Next</span>
+				    </a>
+				  </div>
 			
-			<h1 class="sectionHead"><a href="#photoFilmPage">Photo & Film</a></h1>
-			<div class="containerxs" style="float: right;">
-				<a href="http://www.lexingtonhistory.org"><img class="photoLink l1" src="img/historicalSociety.png"></a>
-				<a href="http://satyarthi-us.org"><img class="photoLink l2" src="img/satyarthi.png"></a>
-				<div class="photoLink l3"><p style="text-align: center; padding-top: 50%; font-size: 20px;">Rohan Photography</p><a href="rohan-photography.com"></a></div>
-			</div>
-			<p>Rohan Sharma is the photographer for the Lexington Historical Society in Lexington, MA</p>
-		</div>
-		<div class="sectionLG nobles">
-			<h1 class="sectionHead"><a href="#noblesPage">Nobles</a></h1>
-		</div>
-		<div class="sectionLG robotics">
-			<h1 class="sectionHead"><a href="#roboticsPage">Robotics</a></h1>
-		</div>
-		<div class="sectionLG service">
-			<h1 class="sectionHead"><a href="#servicePage">Service</a></h1>
-		</div>
-		<div class="sectionLG sports">
-			<h1 class="sectionHead"><a href="#sportsPage">Sports</a></h1>
-			<a href="https://modules.ussquash.com/ssm/pages/Player_Profile.asp?id=117376"><img class="photoLink l1" src="img/usSquash.jpg"></a>
-		</div>
-		<div class="sectionLG software">
-			<h1 class="sectionHead"><a href="#softwarePage">Software</a></h1>
-
-			<button type="button" class="btn btn-default" style="background:black; margin-right: 5%;"><a style="text-decoration: none; color: white;" href="https://github.com/rohandangsharma">View Github</a></button>
-		</div>
-
-		<div id="grid">
-			<div class="container">
-				<section class="grid3d horizontal" id="grid3d">
-					<div class="grid-wrap">
-						<div class="grid">
-							<figure class="effect-ming">
-								<img src="img/historicalSociety.png" alt="img04"/>
-								<figcaption>
-									<h2>Historical <span>Society</span></h2>
-									<p>I am the photographer for the Lexington Historical Society</p>
-									<a href="#">View more</a>
-								</figcaption>
-							</figure>
-							<figure class="effect-ming">
-								<img src="img/satyarthi.png" alt="img03"/>
-								<figcaption>
-									<h2>Satyarthi <span>Foundation</span></h2>
-									<p>I have worked as a photographer for the Kilash Satyarthi Children's Foundation.</p>
-									<a href="#">View more</a>
-								</figcaption>
-							</figure>
-							<figure class="effect-ming">
-								<img src="img/rohanPhotography.png" alt="img01"/>
-								<figcaption>
-									<h2>Rohan <span>Photography</span></h2>
-									<p></p>
-									<a href="#">View more</a>
-								</figcaption>
-							</figure>
-							<figure class="effect-ming"><img src="img/5.jpg" alt="img05"/></figure>
-							<figure class="effect-ming"><img src="img/2.jpg" alt="img02"/></figure>
-							<figure class="effect-ming"><img src="img/8.jpg" alt="img08"/></figure>
-							<figure class="effect-ming"><img src="img/github.png" alt="img09"/>
-							<figcaption>
-									<a href="https://github.com/rohandangsharma">View more</a>
-										<h2>View <span>GitHub</span></h2>
-										<p>Github is a tool I use to store my software project files. View my GitHub here!</p>
-									
-								</figcaption>
-							</figure>
-							<figure class="effect-ming">
-								<img src="img/usSquash.jpg" alt="img06"/>
-								<figcaption>
-									<h2>US <span>Squash</span></h2>
-									<p>I compete in Squash Tournaments through US Squash</p>
-									<a href="#">View more</a>
-								</figcaption>
-							</figure>
-							<figure class="effect-ming"><img src="img/noblesAthletics.jpg" alt="img07"/>
-							<figcaption>
-									<h2>Nobles <span>Athletics</span></h2>
-									<p>I have played for various athletic teams at the Noble and Greenough School</p>
-									<a href="#">View more</a>
-								</figcaption>
-							</figure>
-
-						</div>
-					</div><!-- /grid-wrap -->
-					<div class="content">
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-							<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text"> #8</p>
-						</div>
-						<div>
-							<div class="dummy-img"></div>
-							<p class="dummy-text">#9</p>
-						</div>
-						<span class="loading"></span>
-						<span class="icon close-content"></span>
-					</div>
-				</section>
-			</div><!-- /container -->
-		</div>
-		<script src="js/classie.js"></script>
-		<script src="js/helper.js"></script>
-		<script src="js/grid3d.js"></script>
-		<script>
-			new grid3D( document.getElementById( 'grid3d' ) );
-		</script>
-
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-	        
-	        <script type="text/javascript">
-	            // When the window has finished loading create our google map below
-	            google.maps.event.addDomListener(window, 'load', init);
-	        
-	            function init() {
-	                // Basic options for a simple Google Map
-	                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-	                var mapOptions = {
-	                    // How zoomed in you want the map to start at (always required)
-	                    zoom: 8,
-
-	                    // The latitude and longitude to center the map (always required)
-	                    center: new google.maps.LatLng(42.3600, -71.0589), // Boston
-
-	                    // How you would like to style the map. 
-	                    // This is where you would paste any style found on Snazzy Maps.
-	                    styles: [{"featureType":"all","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"},{"saturation":"-100"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40},{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"lightness":21}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#7f8d89"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#2b3638"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2b3638"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
-	                };
-
-	                // Get the HTML DOM element that will contain your map 
-	                // We are using a div with id="map" seen below in the <body>
-	                var mapElement = document.getElementById('map');
-
-	                // Create the Google Map using our element and options defined above
-	                var map = new google.maps.Map(mapElement, mapOptions);
-
-	                // Let's also add a marker while we're at it
-	                var marker = new google.maps.Marker({
-	                    position: new google.maps.LatLng(42.3600, -71.0589),
-	                    map: map,
-	                    title: 'Boston, MA'
-	                });
-	            }
-	        </script>
-
-			<div class="sectionSM s2">
-				<div id="map"></div>
-				<div id="contactUs">
-					<h1>Contact Us!</h1>
-					<form class="contactUs" action="#">
-					  <ul>
-					    <li>
-					      <p>
-					        <label for="first_name">first name</label>
-					        <input type="text" name="first_name" placeholder="John" />
-					      </p>
-					      <p>
-					        <label for="last_name">last name</label>
-					        <input type="text" name="last_name" placeholder="Smith" />      
-					      </p>
-					    </li>
-					    
-					    <li>
-					      <p>
-					        <label for="email">email <span class="req">*</span></label>
-					        <input type="email" name="email" placeholder="john.smith@gmail.com" />
-					      </p>
-					    </li>        
-					    <li>
-					      <label for="comments">comments</label>
-					      <textarea cols="46" rows="3" name="comments"></textarea>
-					    </li>
-					    
-					    <li>
-					      <input class="btn btn-submit" type="submit" value="Submit" />
-					      <small>or press <strong>enter</strong></small>
-					    </li>
-					    
-					  </ul>
-					</form> 
+			<!-- <div class="section LG photoFilm">
+				
+				<h1 class="sectionHead"><a href="#photoFilmPage">Photo & Film</a></h1>
+				<div class="containerxs" style="float: right;">
+					<a href="http://www.lexingtonhistory.org"><img class="photoLink l1" src="img/historicalSociety.png"></a>
+					<a href="http://satyarthi-us.org"><img class="photoLink l2" src="img/satyarthi.png"></a>
+					<div class="photoLink l3"><p style="text-align: center; padding-top: 50%; font-size: 20px;">Rohan Photography</p><a href="rohan-photography.com"></a></div>
 				</div>
+				<p>Rohan Sharma is the photographer for the Lexington Historical Society in Lexington, MA</p>
 			</div>
-		<div class="sectionXS s3">
-			<p id="copyright">© Rohan Sharma 2017</p>
+			<div class="section LG nobles">
+				<h1 class="sectionHead"><a href="#noblesPage">Nobles</a></h1>
+			</div>
+			<div class="section LG robotics">
+				<h1 class="sectionHead"><a href="#roboticsPage">Robotics</a></h1>
+			</div>
+			<div class="section LG service">
+				<h1 class="sectionHead"><a href="#servicePage">Service</a></h1>
+			</div>
+			<div class="section LG sports">
+				<h1 class="sectionHead"><a href="#sportsPage">Sports</a></h1>
+				<a href="https://modules.ussquash.com/ssm/pages/Player_Profile.asp?id=117376"><img class="photoLink l1" src="img/usSquash.jpg"></a>
+			</div>
+			<div class="section LG software">
+				<h1 class="sectionHead"><a href="#softwarePage">Software</a></h1>
+
+				<button type="button" class="btn btn-default" style="background:black; margin-right: 5%;"><a style="text-decoration: none; color: white;" href="https://github.com/rohandangsharma">View Github</a></button>
+			</div> -->
+
+			<div id="grid">
+				<div class="container">
+					<section class="grid3d horizontal" id="grid3d">
+						<div class="grid-wrap">
+							<div class="grid">
+								<div class="section LG photoFilm">
+								<h1 class="sectionHead"><a href="#photoFilmPage">Photo & Film</a></h1>
+									<figure class="effect-ming">
+										<img src="img/historicalSociety.png" alt="img04"/>
+										<figcaption>
+											<h2>Historical <span>Society</span></h2>
+											<p>I am the photographer for the Lexington Historical Society</p>
+											<a href="#">View more</a>
+										</figcaption>
+									</figure>
+									<figure class="effect-ming">
+										<img src="img/satyarthi.png" alt="img03"/>
+										<figcaption>
+											<h2>Satyarthi <span>Foundation</span></h2>
+											<p>I have worked as a photographer for the Kilash Satyarthi Children's Foundation.</p>
+											<a href="#">View more</a>
+										</figcaption>
+									</figure>
+									<figure class="effect-ming">
+										<img src="img/rohanPhotography.png" alt="img01"/>
+										<figcaption>
+											<h2>Rohan <span>Photography</span></h2>
+											<p></p>
+											<a href="#">View more</a>
+										</figcaption>
+									</figure>
+								</div>
+								
+								<div class="section LG sports">
+									<h1 class="sectionHead"><a href="#sportsPage">Sports</a></h1>
+									<figure class="effect-ming">
+										<img src="img/usSquash.jpg" alt="img06"/>
+										<figcaption>
+											<h2>US <span>Squash</span></h2>
+											<p>I compete in Squash Tournaments through US Squash</p>
+											<a href="#">View more</a>
+										</figcaption>
+									</figure>
+									<figure class="effect-ming"><img src="img/noblesAthletics.jpg" alt="img07"/>
+									<figcaption>
+											<h2>Nobles <span>Athletics</span></h2>
+											<p>I have played for various athletic teams at the Noble and Greenough School</p>
+											<a href="#">View more</a>
+										</figcaption>
+									</figure>
+								</div>
+								
+								<div class="section LG engineering">
+									<h1 class="sectionHead"><a href="#engineering">Engineering</a></h1>
+									<figure class="effect-ming"><img src="img/github.png" alt="img09"/>
+									<figcaption>
+											<a href="https://github.com/rohandangsharma">View more</a>
+												<h2>View <span>GitHub</span></h2>
+												<p>Github is a tool I use to store my software project files. View my GitHub here!</p>
+										</figcaption>
+									</figure>
+									<figure class="effect-ming"><img src="img/ftc.jpg">
+										<figcaption>
+											<h2>FIRST <span>Robotics</span></h2>
+											<p>I have competed in both the FLL and FTC robotics compeitions for the past eight years</p>
+										</figcaption>
+								</div>
+							</div>
+						</div><!-- /grid-wrap -->
+						<div class="content">
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+								<p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text"> #8</p>
+							</div>
+							<div>
+								<div class="dummy-img"></div>
+								<p class="dummy-text">#9</p>
+							</div>
+							<span class="loading"></span>
+							<span class="icon close-content"></span>
+						</div>
+					</section>
+				</div><!-- /container -->
+			</div>
+			<script src="js/classie.js"></script>
+			<script src="js/helper.js"></script>
+			<script src="js/grid3d.js"></script>
+			<script>
+				new grid3D( document.getElementById( 'grid3d' ) );
+			</script>
+
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+		        
+		        <script type="text/javascript">
+		            // When the window has finished loading create our google map below
+		            google.maps.event.addDomListener(window, 'load', init);
+		        
+		            function init() {
+		                // Basic options for a simple Google Map
+		                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+		                var mapOptions = {
+		                    // How zoomed in you want the map to start at (always required)
+		                    zoom: 8,
+
+		                    // The latitude and longitude to center the map (always required)
+		                    center: new google.maps.LatLng(42.3600, -71.0589), // Boston
+
+		                    // How you would like to style the map. 
+		                    // This is where you would paste any style found on Snazzy Maps.
+		                    styles: [{"featureType":"all","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"},{"saturation":"-100"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40},{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"lightness":21}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#7f8d89"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#2b3638"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2b3638"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
+		                };
+
+		                // Get the HTML DOM element that will contain your map 
+		                // We are using a div with id="map" seen below in the <body>
+		                var mapElement = document.getElementById('map');
+
+		                // Create the Google Map using our element and options defined above
+		                var map = new google.maps.Map(mapElement, mapOptions);
+
+		                // Let's also add a marker while we're at it
+		                var marker = new google.maps.Marker({
+		                    position: new google.maps.LatLng(42.3600, -71.0589),
+		                    map: map,
+		                    title: 'Boston, MA'
+		                });
+		            }
+		        </script>
+	        	<div id="map"></div>
+				
+
+
+			<div class="section XS s3">
+				<p id="copyright">Copyright © 2017. Rohan Sharma.</p>
+			</div>
+
 		</div>
 
 	</body>
