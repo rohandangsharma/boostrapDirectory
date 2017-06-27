@@ -1,16 +1,24 @@
-@font-face { font-family: Big John; src: url('fonts/BIG JOHN.otf'); } 
-@font-face { font-family: Slim Joe; src: url('fonts/Slim Joe.otf');}
-
-
-@font-face { font-family: Roboto; src: url("fonts.googleapis.com/css?family=Abel:400|Roboto+Condensed:400,700,700i,300i,300|Roboto:700,700i,300i,300|Source+Code+Pro:400,500,300,700");}
-
-video {
-	background-repeat: no-repeat;
+body {
+	font-family: Helvetica;
 }
 
-.container {
-	width: 100%;
-}
+#bgvid { 
+    width: 100%;
+    background-repeat: no-repeat;
+	
+    position: fixed;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+ }
+
+ .navbar-brand {
+ 	font-weight: bold;
+ }
+
 
 .wrapper {
 	background: white;
@@ -74,22 +82,6 @@ body {
 	background: #273843;
 }
 
-video#bgvid { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    /*height: 100%;*/
-    /*width: auto;
-    height: auto;*/
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
-    background-size: cover; 
-}
 
 #logo:hover {
 	color: orange;
@@ -103,11 +95,44 @@ video#bgvid {
 	font-size: 20px;
 }
 
-.navbar{
-	background: #FFFFFF;
+
+.navbar {
+	padding-left: 1%;
 	display: none;
 }
 
+.nav {
+	border-style: none;
+}
+
+#aboutMeNav {
+	color: green;
+}
+
+.navbar-nav > li > a {padding-top:20px !important; padding-bottom:20px !important;}
+.navbar {min-height:32px !important}
+
+.divider-vertical {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#chat {
+	float: right;
+}
+
+
+@media(max-width: 575px) {
+	#map {
+	height: 50%;
+	}
+}
+
+@media(min-width: 576px) {
+	#map {
+		height: 75%;
+	}
+}
 
 #chatBot {
     width: 100%;
@@ -142,6 +167,10 @@ h3 {
 	height: 50%;
 }
 
+.M {
+	height: 75%;
+}
+
 .LG {
 	height: 90%;
 }
@@ -150,8 +179,8 @@ h3 {
 	height: 100%;
 }
 
-.s1 {background: #00AB38; overflow: hidden;}
-.s2 {background: #FFFFFF; overflow: hidden;}
+.s1 {background: #00AB38;}
+.s2 {background: #FFFFFF;}
 .s3 {background: #273843;}
 .s4{
 	/*background: url("http://demo.qodeinteractive.com/passage/wp-content/uploads/2013/07/revolution-05-center.jpg") fixed;*/
@@ -164,22 +193,11 @@ h3 {
 .service {background: #D3D3D3;}
 .sports {background: #D3D3D3;}
 .engineering {background: #D3D3D3;}
+.contactMe {background: #D3D3D3;}
 
 .tint {
     background: rgba(0, 255, 255, 0.5)
   }
-
-#map {
-width: 50%;
-height: 100%;
-}
-
-#contactUs {
-	position: relative;
-	left: 5%;
-}
-
-#map, #contactUs { float: left; }
 
 .sectionHead {
 	padding-top: 5%;
@@ -192,8 +210,4 @@ height: 100%;
 	background: black;
 	color: white;
 	border-color: black;
-}
-
-.container {
-	width: 100%;
 }

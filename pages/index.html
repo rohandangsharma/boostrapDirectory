@@ -9,18 +9,23 @@
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/rohanStylesheet.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<!-- <link rel="stylesheet" type="text/css" href="css/contactMe.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/tiles.css" />
+		<link rel="stylesheet" type="text/css" href="css/aboutMe.css" />
 		<script src="js/modernizr.custom.js"></script>
+		<script src="gen_validatorv4.js" type="text/javascript"></script>
+
 	
 		
 	</head>
 	<body>
 		<div class="section XL s4">
 			<h1 class="title">ROHAN <span> SHARMA</span></h1>
-			<button class="btn explore">EXPLORE</button>
+			<div class="col-xs-12">
+				<button class="btn explore">EXPLORE</button>
+			</div>
+			<div class="col-xs-12">
 			<button class="btn arrow"><img src="http://www.sailingcollective.com/assets/img/icon/gal-arrow.png"></button>
-
+			</div>
 
 			<video playsinline autoplay muted loop id="bgvid">
 			    <source src="img/stars.mp4" type="video/mp4">
@@ -29,14 +34,16 @@
 
 		<script>
 			$(".explore").click(function() {
+			    $('.navbar-default').fadeIn();
 			    $('html,body').animate({
-			        scrollTop: $(".container").offset().top},
+			        scrollTop: $(".container-fluid").offset().top},
 			        'slow');
 			});
 
 			$(".arrow").click(function() {
+			    $('.navbar-default').fadeIn();
 			    $('html,body').animate({
-			        scrollTop: $(".container").offset().top},
+			        scrollTop: $(".container-fluid").offset().top},
 			        'slow');
 			});
 		</script>
@@ -51,40 +58,72 @@
 				</iframe> -->
 			</div>
 
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div id="leftNavBar" class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a id="logo" class="navbar-brand" href="index.html">ROHAN'S PROJECTS</a>
+
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div id="leftNavBar" class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
 			    </div>
 
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav">
-			        <li class="active"><a href="#">HOME<span class="sr-only">(current)</span></a></li>
-			        <li><a href="#">ABOUT</a></li>
-			      </ul>
-			      <form class="navbar-form navbar-left">
-			        <input type="button" data-name="show" value="CHAT" id="chat">
-			      </form>
-			    </div><!-- /.navbar-collapse -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				  	<ul class="nav navbar-nav">
+				  		<li id="home"><a class="navbar-brand" href="index.html">ROHAN'S PROJECTS</a></li>
+
+			  		</ul>
+			  		<ul class="nav navbar-nav pull-right">
+			    		
+			    		<li id="aboutMeNav"><a href="aboutMe.html">ABOUT ME</a></li>
+			    		<li id="photoFilmNav"><a href="#">PHOTO & FILM</a></li>
+			    		<li id="serviceNav"><a href="#">SERVICE</a></li>
+			    		<li id="sportsNav"><a href="#">SPORTS</a></li>
+			    		<li id="engineeringNav"><a href="#">ENGINEERING</a></li>
+			    		
+			    	</ul>
+				</div>
 			</nav>
+
+			<script>
+					$(".photoFilmNav").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".photoFilm").offset().top},
+					        'slow');
+					});
+
+
+					$(".serviceNav").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".service").offset().top},
+					        'slow');
+					});
+
+					$(".sportsNav").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".sports").offset().top},
+					        'slow');
+					});
+
+					$(".engineeringNav").click(function() {
+					    $('html,body').animate({
+					        scrollTop: $(".engineering").offset().top},
+					        'slow');
+					});
+				</script>
+
 
 			<script>
 			   $(window).scroll(function() {
 
 				    if ($(this).scrollTop()>0)
 				     {
-				        $('.navbar').fadeIn();
+				        $('.navbar-default').fadeIn();
 				     }
 				    else
 				     {
-				      $('.navbar').fadeOut();
+				      $('.navbar-default').fadeOut();
 				     }
 				 });
 			</script>
@@ -117,7 +156,7 @@
 			</script>
 
 			<!-- Carousel -->
-				<div class="container">
+				<div class="container-fluid">
 				  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 				    <!-- Indicators -->
 				    <ol class="carousel-indicators">
@@ -164,12 +203,6 @@
 				         	<h3>Engineering</h3>
 			         	 </div>
 			           </div>
-					   
-					   <script type="text/javascript">
-						$(document).ready(function() {
-						   $('.item').localScroll({duration:800});
-						});
-						</script>
 
 				    </div> <!-- container -->
 
@@ -228,38 +261,9 @@
 				      <span class="sr-only">Next</span>
 				    </a>
 				  </div>
-			
-			<!-- <div class="section LG photoFilm">
-				
-				<h1 class="sectionHead"><a href="#photoFilmPage">Photo & Film</a></h1>
-				<div class="containerxs" style="float: right;">
-					<a href="http://www.lexingtonhistory.org"><img class="photoLink l1" src="img/historicalSociety.png"></a>
-					<a href="http://satyarthi-us.org"><img class="photoLink l2" src="img/satyarthi.png"></a>
-					<div class="photoLink l3"><p style="text-align: center; padding-top: 50%; font-size: 20px;">Rohan Photography</p><a href="rohan-photography.com"></a></div>
-				</div>
-				<p>Rohan Sharma is the photographer for the Lexington Historical Society in Lexington, MA</p>
-			</div>
-			<div class="section LG nobles">
-				<h1 class="sectionHead"><a href="#noblesPage">Nobles</a></h1>
-			</div>
-			<div class="section LG robotics">
-				<h1 class="sectionHead"><a href="#roboticsPage">Robotics</a></h1>
-			</div>
-			<div class="section LG service">
-				<h1 class="sectionHead"><a href="#servicePage">Service</a></h1>
-			</div>
-			<div class="section LG sports">
-				<h1 class="sectionHead"><a href="#sportsPage">Sports</a></h1>
-				<a href="https://modules.ussquash.com/ssm/pages/Player_Profile.asp?id=117376"><img class="photoLink l1" src="img/usSquash.jpg"></a>
-			</div>
-			<div class="section LG software">
-				<h1 class="sectionHead"><a href="#softwarePage">Software</a></h1>
-
-				<button type="button" class="btn btn-default" style="background:black; margin-right: 5%;"><a style="text-decoration: none; color: white;" href="https://github.com/rohandangsharma">View Github</a></button>
-			</div> -->
 
 			<div id="grid">
-				<div class="container">
+				<div class="container-fluid">
 					<section class="grid3d horizontal" id="grid3d">
 						<div class="grid-wrap">
 							<div class="grid">
@@ -308,6 +312,24 @@
 											<a href="#">View more</a>
 										</figcaption>
 									</figure>
+									<figure class="effect-ming"><img src="img/nepga.jpg">
+										<figcaption>
+											<h2>NEPGA <span>Junior Tour</span></h2>
+											<p>I have played in various golf tournaments throughout New England through the NEGPA Junior Tour</p>
+										</figcaption>
+									</figure>
+								</div>
+
+								<div class="section LG service">
+									<h1 class="sectionHead"><a href="#servicePage">Service</a></h1>
+									<figure class="effect-ming">
+										<img src="img/satyarthi.png" alt="img06"/>
+										<figcaption>
+											<h2>Satyarthi <span>Foundation</span></h2>
+											<p>I have worked as a photographer for the Kilash Satyarthi Children's Foundation.</p>
+											<a href="#">View more</a>
+										</figcaption>
+									</figure>
 								</div>
 								
 								<div class="section LG engineering">
@@ -324,6 +346,13 @@
 											<h2>FIRST <span>Robotics</span></h2>
 											<p>I have competed in both the FLL and FTC robotics compeitions for the past eight years</p>
 										</figcaption>
+									</figure>
+									<figure class="effect-ming"><img src="img/noblesAthletics.jpg">
+										<figcaption>
+											<h2>Nobles <span>APP</span></h2>
+											<p>I have built both the Android and iOS versions of Noble and Greenough School App</p>
+										</figcaption>
+									</figure>
 								</div>
 							</div>
 						</div><!-- /grid-wrap -->
@@ -380,6 +409,8 @@
 			<script src="js/classie.js"></script>
 			<script src="js/helper.js"></script>
 			<script src="js/grid3d.js"></script>
+			
+
 			<script>
 				new grid3D( document.getElementById( 'grid3d' ) );
 			</script>
@@ -418,9 +449,98 @@
 		                    map: map,
 		                    title: 'Boston, MA'
 		                });
-		            }
+		            } 
 		        </script>
-	        	<div id="map"></div>
+	        	
+	        		
+	        		<div class="section M s3 contactUs">
+	        			<h1 class="contactMeTitle">Contact Me!</h1>
+	        			<div class="col-sm-6 col-xs-12 map" id="map"></div>
+						<div class="col-sm-6 col-xs-12 contactForm" id="contactForm">
+							<section>
+								<form action="" id="theForm" class="simform" autocomplete="on">
+									<div class="simform-inner">
+										<ol class="questions">
+											<li>
+												<span><label for="q1">What's your Name?</label></span>
+												<input id="q1" name="q1" type="text" placeholder="John Smith"/>
+
+											</li>
+											<li>
+												<span><label for="q2">What's your email Address?</label></span>
+												<input id="q2" name="q2" type="text" placeholder="john.smith@email.com"/>
+											</li>
+											<li>
+												<span><label for="q3">What would you like to say?</label></span>
+												<input id="q3" name="q3" type="text"/>
+										</ol><!-- /questions -->
+										<!-- <button class="submit" type="submit">Send answers</button> -->
+										<div class="controls">
+											<button class="next"></button>
+											<div class="progress"></div>
+											<span class="number">
+												<span class="number-current"></span>
+												<span class="number-total"></span>
+											</span>
+											<span class="error-message"></span>
+										</div><!-- / controls -->
+									</div><!-- /simform-inner -->
+									<span class="final-message"></span>
+								</form><!-- /simform -->			
+							</section>
+						</div>
+					</div><!-- /container -->
+					<script type="text/javascript">
+						$(document).ready(function () {
+						    $("#chat").click(function () {
+						        if ($(this).data('name') == 'show') {
+						            $("#chatBot").animate({
+						                height: '100%'
+						            });
+						            $(this).data('name', 'hide')
+						            $(".body")
+						        } else {
+						            $("#chatBot").animate({
+						                height: '0%'
+						            });
+						            $(this).data('name', 'show')
+						        }
+						    });
+						});
+					</script>
+					<script src="js/classie.js"></script>
+					<script src="js/stepsForm.js"></script>
+					<script>
+						var theForm = document.getElementById( 'theForm' );
+
+						new stepsForm( theForm, {
+							onSubmit : function( form ) {
+								// hide form
+								classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+								/*
+								form.submit()
+								or
+								AJAX request (maybe show loading indicator while we don't have an answer..)
+								*/
+
+								// let's just simulate something...
+								var messageEl = theForm.querySelector( '.final-message' );
+								messageEl.innerHTML = 'Awesome! We\'ll be in touch.';
+								classie.addClass( messageEl, 'show' );
+							}
+						} );
+
+						var frmvalidator  = new Validator("theForm");
+						frmvalidator.addValidation("q1","req","Please provide your name");
+						frmvalidator.addValidation("q2","req","Please provide your email");
+						frmvalidator.addValidation("q2","email",
+						"Please enter a valid email address");
+					
+						
+					</script>
+
+        		</div>
 				
 
 
