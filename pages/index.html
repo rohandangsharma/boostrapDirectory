@@ -10,7 +10,7 @@
 		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/rohanStylesheet.css" />
 		<link rel="stylesheet" type="text/css" href="css/tiles.css" />
-		<link rel="stylesheet" type="text/css" href="css/aboutMe.css" />
+		<link rel="stylesheet" type="text/css" href="css/contactMe.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<script src="gen_validatorv4.js" type="text/javascript"></script>
 
@@ -24,7 +24,7 @@
 				<button class="btn explore">EXPLORE</button>
 			</div>
 			<div class="col-xs-12">
-			<button class="btn arrow"><img src="http://www.sailingcollective.com/assets/img/icon/gal-arrow.png"></button>
+			<button class="btn arrow"><img src="img/arrow.png"></button>
 			</div>
 
 			<video playsinline autoplay muted loop id="bgvid">
@@ -355,6 +355,12 @@
 									</figure>
 								</div>
 							</div>
+							<!-- <script>
+								var cw = $('.grid figure').width();
+								$('.grid figure').css({
+								    'height': cw + 'px'
+								});
+							</script> -->
 						</div><!-- /grid-wrap -->
 						<div class="content">
 							<div>
@@ -401,7 +407,7 @@
 								<p class="dummy-text">#9</p>
 							</div>
 							<span class="loading"></span>
-							<span class="icon close-content"></span>
+							<span class="icon close-content">CLOSE</span>
 						</div>
 					</section>
 				</div><!-- /container -->
@@ -458,7 +464,7 @@
 	        			<div class="col-sm-6 col-xs-12 map" id="map"></div>
 						<div class="col-sm-6 col-xs-12 contactForm" id="contactForm">
 							<section>
-								<form action="" id="theForm" class="simform" autocomplete="on">
+								<form action="https://script.google.com/macros/s/AKfycbzTZ7HKbuF1kHBPbggKKC7bElVehhKdvuHlhY44jAj-B40kV2J2/exec" id="gform" class="simform" autocomplete="on" method="POST">
 									<div class="simform-inner">
 										<ol class="questions">
 											<li>
@@ -472,7 +478,7 @@
 											</li>
 											<li>
 												<span><label for="q3">What would you like to say?</label></span>
-												<input id="q3" name="q3" type="text"/>
+												<input id="q3" name="q3" type="text" onblur="validateEmail(this);"/>
 										</ol><!-- /questions -->
 										<!-- <button class="submit" type="submit">Send answers</button> -->
 										<div class="controls">
@@ -490,28 +496,11 @@
 							</section>
 						</div>
 					</div><!-- /container -->
-					<script type="text/javascript">
-						$(document).ready(function () {
-						    $("#chat").click(function () {
-						        if ($(this).data('name') == 'show') {
-						            $("#chatBot").animate({
-						                height: '100%'
-						            });
-						            $(this).data('name', 'hide')
-						            $(".body")
-						        } else {
-						            $("#chatBot").animate({
-						                height: '0%'
-						            });
-						            $(this).data('name', 'show')
-						        }
-						    });
-						});
-					</script>
+					
 					<script src="js/classie.js"></script>
 					<script src="js/stepsForm.js"></script>
 					<script>
-						var theForm = document.getElementById( 'theForm' );
+						var theForm = document.getElementById( 'gform' );
 
 						new stepsForm( theForm, {
 							onSubmit : function( form ) {
@@ -531,13 +520,27 @@
 							}
 						} );
 
-						var frmvalidator  = new Validator("theForm");
-						frmvalidator.addValidation("q1","req","Please provide your name");
-						frmvalidator.addValidation("q2","req","Please provide your email");
-						frmvalidator.addValidation("q2","email",
-						"Please enter a valid email address");
+						
 					
 						
+					</script>
+					<script type="text/javascript">
+						$(document).ready(function () {
+						    $("#chat").click(function () {
+						        if ($(this).data('name') == 'show') {
+						            $("#chatBot").animate({
+						                height: '100%'
+						            });
+						            $(this).data('name', 'hide')
+						            $(".body")
+						        } else {
+						            $("#chatBot").animate({
+						                height: '0%'
+						            });
+						            $(this).data('name', 'show')
+						        }
+						    });
+						});
 					</script>
 
         		</div>
