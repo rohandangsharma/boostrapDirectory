@@ -1,24 +1,29 @@
 body {
 	font-family: Helvetica;
+	background: #273843;
 }
 
 #bgvid { 
     width: 100%;
     background-repeat: no-repeat;
-	
     position: fixed;
     z-index: -100;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-
  }
+
+@media (max-width: 768px){
+	#bgvid {
+		height: 200%;
+		width: auto;
+	}
+}
 
  .navbar-brand {
  	font-weight: bold;
  }
-
 
 .wrapper {
 	background: white;
@@ -28,13 +33,16 @@ body {
 	font-family: Helvetica;
 	letter-spacing: 10px;
 	display: block;
-    font-size: 2em;
+    font-size: 10vw;
     vertical-align: baseline;
     color:white;
-    font-size: 700%;
     margin-top: 20%
+}
 
-
+@media (max-width: 576px) {
+	.title {
+		font-size: 15vw;
+	}
 }
 
 .s4 h1 {
@@ -76,16 +84,6 @@ body {
   top: +20px;
 }
 
-
-body {
-	font-family: Roboto;
-	background: #273843;
-}
-
-
-#logo:hover {
-	color: orange;
-}
 
 #copyright {
 	color: white;
@@ -153,7 +151,15 @@ h3 {
 }
 
 
-.item { height:100%; }
+.item { max-height:100%; }
+
+@media (max-width: 768px) {
+	.photoFilm, .nobles, .robotics, .service, .sports, .engineering {
+		display: inline-block; 
+		height: auto;
+		margin-bottom: 10%;
+	}
+}
 
 .section {
 	width: 100%;
@@ -183,7 +189,6 @@ h3 {
 .s2 {background: #FFFFFF;}
 .s3 {background: #273843;}
 .s4{
-	/*background: url("http://demo.qodeinteractive.com/passage/wp-content/uploads/2013/07/revolution-05-center.jpg") fixed;*/
 	text-align: center;
 }
 
@@ -210,4 +215,14 @@ h3 {
 	background: black;
 	color: white;
 	border-color: black;
+}
+
+
+.overlay {
+	position: relative;
+	width: 100%;
+	height: 450px;
+	top: 450px;
+	margin-top: -450px;
+	z-index: 1;
 }
